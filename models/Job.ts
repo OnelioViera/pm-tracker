@@ -6,9 +6,7 @@ export interface IJob {
   description?: string;
   projectManagerId: string;
   status: 'active' | 'on-hold' | 'completed' | 'cancelled';
-  budget?: number;
-  startDate?: Date;
-  endDate?: Date;
+  date?: Date;
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -34,13 +32,7 @@ const JobSchema = new Schema<IJob>(
       enum: ['active', 'on-hold', 'completed', 'cancelled'],
       default: 'active',
     },
-    budget: {
-      type: Number,
-    },
-    startDate: {
-      type: Date,
-    },
-    endDate: {
+    date: {
       type: Date,
     },
   },

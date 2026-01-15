@@ -4,7 +4,7 @@ export interface IProjectManager {
   _id?: string;
   name: string;
   email?: string;
-  company?: string;
+  phone?: string;
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -20,7 +20,7 @@ const ProjectManagerSchema = new Schema<IProjectManager>(
       type: String,
       trim: true,
     },
-    company: {
+    phone: {
       type: String,
       trim: true,
     },
