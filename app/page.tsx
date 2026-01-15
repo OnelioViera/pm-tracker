@@ -45,8 +45,8 @@ export default function Home() {
 
   // Form states
   const [pmForm, setPMForm] = useState({ name: '', email: '', company: '' });
-  const [workForm, setWorkForm] = useState({ title: '', description: '', status: 'pending' as const });
-  const [jobForm, setJobForm] = useState({ title: '', description: '', status: 'active' as const, budget: '' });
+  const [workForm, setWorkForm] = useState<{ title: string; description: string; status: Work['status'] }>({ title: '', description: '', status: 'pending' });
+  const [jobForm, setJobForm] = useState<{ title: string; description: string; status: Job['status']; budget: string }>({ title: '', description: '', status: 'active', budget: '' });
 
   useEffect(() => {
     fetchProjectManagers();
