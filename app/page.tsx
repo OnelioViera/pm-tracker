@@ -346,9 +346,9 @@ export default function Home() {
       addLine('No project managers.');
     } else {
       projectManagers.forEach(pm => {
-        doc.setFont(undefined, 'bold');
+        doc.setFont('helvetica', 'bold');
         addLine(`• ${pm.name}`);
-        doc.setFont(undefined, 'normal');
+        doc.setFont('helvetica', 'normal');
         if (pm.phone) addLine(`  Phone: ${pm.phone}`);
         if (pm.email) addLine(`  Email: ${pm.email}`);
 
